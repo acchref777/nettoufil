@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Netflixy الجديدة - Login</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Poppins', sans-serif; }
+    body {
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: url('Netflix-Blur-copy.jpg') center/cover no-repeat;
+      position: relative;
+      overflow: hidden;
+    }
+    body::before {
+      content: "";
+      position: absolute;
+      top: 0; left: 0; width: 100%; height: 100%;
+      background: rgba(0,0,0,0.7);
+      backdrop-filter: blur(8px);
+      z-index: 0;
+    }
+    .login-card {
+      position: relative;
+      z-index: 1;
+      background: rgba(20,20,20,0.9);
+      padding: 2rem;
+      border-radius: 12px;
+      width: 320px;
+      color: #fff;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.6);
+    }
+    .login-card h2 {
+      text-align: center;
+      margin-bottom: 1.5rem;
+      font-weight: 700;
+      color: #e50914;
+    }
+    .form-group { margin-bottom: 1rem; }
+    .form-group input {
+      width: 100%;
+      padding: 10px;
+      border: none;
+      border-radius: 6px;
+      outline: none;
+      background: #333;
+      color: #fff;
+    }
+    .remember {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 14px;
+      margin-bottom: 1rem;
+      color: #bbb;
+    }
+    .btn {
+      width: 100%;
+      padding: 10px;
+      border: none;
+      border-radius: 6px;
+      background: #e50914;
+      color: #fff;
+      font-weight: 600;
+      cursor: pointer;
+      margin-bottom: 1rem;
+      transition: background 0.3s;
+    }
+    .btn:hover { background: #f6121d; }
+    .social-btn {
+      width: 100%;
+      padding: 10px;
+      border: none;
+      border-radius: 6px;
+      font-weight: 600;
+      margin-bottom: 0.7rem;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+    }
+    .google { background: #db4437; color: #fff; }
+    .facebook { background: #1877f2; color: #fff; }
+  </style>
+</head>
+<body>
+  <div class="login-card">
+    <h2>Netflixy الجديدة</h2>
+    <form>
+      <div class="form-group">
+        <input type="email" placeholder="Email" required>
+      </div>
+      <div class="form-group">
+        <input type="password" placeholder="Password" required>
+      </div>
+      <div class="remember">
+        <input type="checkbox" id="remember">
+        <label for="remember">Remember password</label>
+      </div>
+      <button class="btn" type="submit">Login</button>
+      <button class="social-btn google"><span>G</span> Sign in with Google</button>
+      <button class="social-btn facebook"><span>f</span> Sign in with Facebook</button>
+    </form>
+  </div>
+</body>
+</html>
